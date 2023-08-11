@@ -1,0 +1,96 @@
+.button{
+    --borderRadius: 0.5rem;
+    background-color: var(--backgroundColor);
+    color: var(--complimentaryColor);
+    border: 0.1rem solid var(--backgroundColor);
+    border-radius: var(--borderRadius);
+    padding: 1rem 2rem;
+    font-size: 1rem;
+}
+
+.button.primary{
+    --backgroundHue: 120;
+    --complimentaryHue: calc(var(--backgroundHue) + 180);
+    --backgroundColor: hsl(var(--backgroundHue), 100%, 70%);
+    --complimentaryColor: hsl(var(--complimentaryHue), 80%, 30%);
+    color: var(--complimentaryColor);
+}
+
+.animated, .button .animated{
+    position: relative;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent !important;
+}
+.animated:after{
+    --clipStart: circle(0% at center);
+    --clipEnd: circle(150% at center);
+    --duration: 500ms;
+    content: '';
+    font-size: 1rem;
+    position: absolute;
+    display: flex;
+    top: 0;
+    left: 0;
+    clip-path: var(--clipStart);
+    backface-visibility: visible;
+    background-color: rgba(255 255 255 / 0.5);
+    box-shadow: 0rem 0rem 1rem hsl(var(--complimentaryHue), 100%, 60%);
+    width: 100%;
+    height: 100%;
+    border-radius: calc(var(--borderRadius) / 1.25);
+}
+.animated:hover{
+    animation: dropletHover var(--duration) ease-in-out both;
+}
+.animated:hover:after{
+    animation: dropletAfterHover var(--duration) ease-in-out infinite;
+    
+}
+.animated:active:after{
+    animation: dropletAfterClick var(--duration) ease-in-out both;
+}
+
+@keyframes dropletHover {
+    0%{
+        clip-path: var(--clipStart);
+        --backgroundColor: var(--backgroundColor);
+    }
+    100%{
+        clip-path: var(--clipEnd);
+        --backgroundColor: var(--complimentaryColor);
+    }
+}
+
+@keyframes dropletAfterHover {
+    0%{
+        opacity: 0;
+        /* box-shadow: 0rem 0rem 0rem hsl(var(--complimentaryHue), 100%, 60%); */
+        clip-path: var(--clipStart);
+    }
+    50%{
+        opacity: 0.2;
+        clip-path: circle(250% at center);
+        /* box-shadow: 0rem 0rem 1rem hsl(var(--complimentaryHue), 100%, 60%); */
+    }
+    100%{
+        opacity: 0;
+        clip-path: var(--clipEnd);
+        /* box-shadow: 0rem 0rem 1rem hsl(var(--complimentaryHue), 100%, 60%); */
+    }
+}
+@keyframes dropletAfterClick {
+    0%{
+        opacity: 0.8;
+        clip-path: var(--clipStart);
+    }
+    50%{
+        opacity: 0.2;
+        /* box-shadow: 0rem 0rem 1rem hsl(var(--complimentaryHue), 100%, 60%); */
+    }
+    100%{
+        opacity: 0;
+        clip-path: var(--clipEnd);
+        /* box-shadow: 0rem 0rem 0rem hsl(var(--complimentaryHue), 100%, 60%); */
+    }
+}

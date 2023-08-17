@@ -1,10 +1,9 @@
 
-// select the element that is your navigation
-const nav = document.getElementById('mainNav')
-
-
 // Select the button that will expand the navigation
 const navExpandButton = document.querySelector('#nav-expand-button')
+
+// select the element that is your navigation
+const nav = document.getElementById('mainNav')
 
 
 // create a function to tell the 
@@ -18,11 +17,12 @@ function handleClick() {
 
     // get the state of the 'aria-expanded' attribute
     const expandedState = nav.getAttribute('aria-expanded')
-    
+        
     // set the attribute of 'aria-expanded' to the opposite of what it currently is
     nav.setAttribute('aria-expanded', !eval(expandedState))
 
 };
+
 
 // tell the browser to listen for a click event 
 // and to run "handleClick" when it is clicked

@@ -10,6 +10,16 @@ body {
   flex-direction: column;
 }
 
+.skipLink {
+  visibility: hidden;
+  height: 0;
+}
+
+.skipLink::selection {
+  visibility: visible;
+  height: auto;
+}
+
 /* Nav specific styles */
 header {
   display: flex;
@@ -77,10 +87,31 @@ section {
   padding: 1rem;
 }
 
+.section-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 1rem;
+  gap: 1rem;
+}
+
 .visually-hidden {
   height: 0;
   width: 0;
   overflow: hidden;
   font-size: 0px;
   display: none;
+}
+
+/* desktop styles */
+@media screen and (min-width: 768px) {
+  .section-body {
+    flex-direction: row;
+    padding: 5rem;
+    /* column-gap: 3rem; */
+  }
+  .section-body > * {
+    max-width: 25%;
+  }
 }

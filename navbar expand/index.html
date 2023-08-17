@@ -97,18 +97,7 @@
                 </div>
             </section>
         </main>
-        <script defer>
-            const navExpandButton = document.querySelector('#nav-expand-button')
-            const nav = document.getElementById('mainNav')
-
-
-            const handleClick = () => {
-                nav.classList.toggle('open')
-                nav.setAttribute('aria-expanded', !eval(nav.getAttribute('aria-expanded')))
-            };
-
-            navExpandButton.addEventListener('click', handleClick)
-        </script>
+        <script src="navbarExpand.js" defer></script>
     </body>
 
 </html>

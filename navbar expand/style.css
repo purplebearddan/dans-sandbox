@@ -9,14 +9,13 @@ body {
   flex-direction: column;
 }
 
+/* Nav specific styles */
 header {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   padding: 1rem;
-  background-color: blue;
   align-items: center;
-  color: white;
 }
 header * {
   display: flex;
@@ -43,11 +42,12 @@ header #mainNav ul {
   flex-direction: column;
 }
 
+/* hide the nav by default */
 #mainNav {
   display: none;
-  background-color: salmon;
 }
 
+/* show the navbar */
 #mainNav.open {
   display: flex;
   flex: 1;

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>NavBar</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <header>
+            <div class="headerWrapper">
+
+                <h1>Brand</h1>
+                <button id="nav-expand-button">
+                    <span class="visually-hidden">Menu</span>
+                    <svg id="menuIcon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                        <g id="SVGRepo_iconCarrier">
+                            <g data-name="Layer 2">
+                                <g data-name="menu">
+                                    <rect width="24" height="24" transform="rotate(180 12 12)" opacity="0"></rect>
+                                    <rect x="3" y="11" width="18" height="2" rx=".95" ry=".95"></rect>
+                                    <rect x="3" y="16" width="18" height="2" rx=".95" ry=".95"></rect>
+                                    <rect x="3" y="6" width="18" height="2" rx=".95" ry=".95"></rect>
+                                </g>
+                            </g>
+                        </g>
+                    </svg>
+                </button>
+            </div>
+            <nav id="mainNav" aria-roledescription="Main Navigation" aria-expanded="false">
+                <ul>
+                    <li><a href="#">Link</a></li>
+                    <li><a href="#">Link</a></li>
+                    <li><a href="#">Link</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section>
+                <h2>Section Header</h2>
+                <div class="section-body">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere natus est magnam minima et nemo.
+                        Perspiciatis ab soluta ullam maiores molestiae, nihil, commodi expedita minima qui a veritatis
+                        nesciunt eligendi?</p>
+                    <p>Est, enim nisi non perspiciatis, itaque ab amet dolore neque ipsam ex suscipit dicta. Deserunt,
+                        dicta temporibus harum ad sapiente iusto natus tempore excepturi error recusandae ea quis eius
+                        nesciunt.</p>
+                    <p>Eius ex earum expedita explicabo, iusto, quod, maxime quaerat velit alias veniam autem aliquid
+                        laudantium vitae laboriosam repellat veritatis. Voluptatum laborum ad eligendi, modi rem alias
+                        voluptas atque rerum sint!</p>
+                </div>
+            </section>
+            <section>
+                <h2>Section Header</h2>
+                <div class="section-body">
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus, quos dignissimos? Neque,
+                        error consectetur ab minima ipsam non consequatur accusamus expedita, hic a odio impedit dolore,
+                        cumque perferendis provident molestiae!</p>
+                    <p>Natus quis, quidem voluptatibus corporis ad doloremque recusandae nostrum consequuntur quia
+                        sapiente harum repellendus sunt quae expedita temporibus sint ut quas incidunt id blanditiis
+                        nulla! A voluptates iure nisi quae!</p>
+                    <p>Itaque laboriosam exercitationem distinctio numquam, aut hic repellat ea, velit omnis inventore
+                        quis. Voluptas eligendi fuga accusantium eaque rem, ratione quod, iste nobis ad in ex ab
+                        necessitatibus repellat et!</p>
+                </div>
+            </section>
+            <section>
+                <h2>Section Header</h2>
+                <div class="section-body">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates amet magnam modi nobis nam
+                        quod cupiditate quia debitis praesentium rerum cumque labore, eum temporibus, quidem sed sunt
+                        porro distinctio ipsum?</p>
+                    <p>Quibusdam neque error totam inventore consequatur, sequi quae, unde, molestias a minus voluptates
+                        accusantium provident reiciendis harum quo. Nihil repellat architecto adipisci magnam dolorem
+                        obcaecati eum commodi corrupti amet ut!</p>
+                    <p>Architecto vero cum explicabo nam fugit suscipit, eligendi praesentium porro accusamus deserunt
+                        consectetur! Ullam dolore aspernatur ea debitis tempore molestias officia neque, quod vitae,
+                        sed, atque aliquid vel ut quo.</p>
+                </div>
+            </section>
+            <section>
+                <h2>Section Header</h2>
+                <div class="section-body">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius deleniti ipsum inventore excepturi
+                        enim reprehenderit rerum? Aspernatur voluptates aut facilis, inventore laborum modi itaque
+                        aliquid voluptatum voluptatem optio quia esse.</p>
+                    <p>Temporibus, culpa! Nesciunt vero atque molestias illum beatae tenetur praesentium nisi! Possimus
+                        quasi dolorem magnam ad sed ipsam repellat magni tenetur incidunt at, nemo, alias eligendi iusto
+                        consectetur nobis itaque!</p>
+                    <p>Aliquam voluptate maxime facere iusto dignissimos inventore voluptatibus totam cumque harum
+                        exercitationem adipisci consequuntur recusandae dicta accusamus quos, quidem blanditiis delectus
+                        veniam porro. Laboriosam officiis, inventore molestias placeat dicta distinctio.</p>
+                </div>
+            </section>
+        </main>
+        <script defer>
+            const navExpandButton = document.querySelector('#nav-expand-button')
+            const nav = document.getElementById('mainNav')
+
+
+            const handleClick = () => {
+                nav.classList.toggle('open')
+                nav.setAttribute('aria-expanded', !eval(nav.getAttribute('aria-expanded')))
+            };
+
+            navExpandButton.addEventListener('click', handleClick)
+        </script>
+    </body>
+
+</html>

@@ -1,2 +1,3 @@
-# dans-sandbox
-A playground for experiments not made for human eyes 
+# Dans Sandbox
+
+A repo for experiments and useful snippets of various code.

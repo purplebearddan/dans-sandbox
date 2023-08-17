@@ -1,3 +1,4 @@
+/* wildcard selector */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -45,12 +46,12 @@ header #mainNav ul {
 /* hide the nav by default */
 #mainNav {
   display: none;
+  justify-content: center;
 }
 
 /* show the navbar */
 #mainNav.open {
   display: flex;
-  flex: 1;
   width: 100%;
   transition: all 0.3s;
 }
@@ -68,6 +69,12 @@ header #mainNav ul {
   padding: 1rem;
   aspect-ratio: 1/1;
   font-size: 2rem;
+  background: none;
+  border: none;
+}
+
+section {
+  padding: 1rem;
 }
 
 .visually-hidden {

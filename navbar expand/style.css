@@ -11,13 +11,13 @@ body {
 }
 
 .skipLink {
-  visibility: hidden;
-  height: 0;
+  position: absolute;
+  top: -50px;
+  left: 0;
 }
 
-.skipLink::selection {
-  visibility: visible;
-  height: auto;
+.skipLink:focus {
+  top: 0px;
 }
 
 /* Nav specific styles */

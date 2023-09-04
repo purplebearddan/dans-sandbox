@@ -9,7 +9,7 @@ x = x + 5
 // using the log method on the console object
 console.log(x, 5, "Dan")
 
-// declare a variable that we cannot change*
+// declare a variable that we cannot change
 const PI = 3.142
 
 // data types 
@@ -20,6 +20,8 @@ const myFloatingPointNumber = 3.142 // number with decimals
 const myBoolean = true // or false
 const myNull = null // literally nothing
 
+
+// examples where numbers are not numbers
 const modelNumber = 'MLN-762394872639400000'
 const serialNumber = '000000000000234234234023423'
 const phoneNumber = '07123456789'
@@ -27,16 +29,18 @@ const PINNumber = '0000'
 
 // array
 const shoppingList = [
-    "milk",  // 0
-    'eggs',  // 1
-    `Ham`,  // 2
-    `cheese`, // 3
-    'bread',  // 4
-    true,  // 5
-    55, // 6
-    modelNumber, // 7
-    null // 8
+    "milk",         // 0
+    'eggs',         // 1
+    `Ham`,          // 2
+    `cheese`,       // 3
+    'bread',        // 4
+    true,           // 5
+    55,             // 6
+    modelNumber,    // 7
+    null            // 8
 ]
+
+// access the array items with [] and the index inside the brackets
 console.log(shoppingList[0])
 
 // JS Object
@@ -54,6 +58,9 @@ const mario = {
 }
 
 console.log(mario['name'])
+
+// we can use dot notation on objects
+console.log(mario.name)
 
 
 

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+
+    <body>
+        <button id="navExpand">Menu</button>
+        <ul id="nav">
+            <li><a href="">hjsgdlf</a></li>
+            <li><a href="">hjsgdlf</a></li>
+            <li><a href="">hjsgdlf</a></li>
+        </ul>
+        <script src="app.js" type="module" defer></script>
+
+        <!-- Navbar Functionality -->
+        <script type="module" defer>
+            // Navbar Functionality
+            import { handleClick } from './libraries/navbarExpand.js'
+            // Select the navigation
+            const nav = document.getElementById('nav')
+            // Select the button that will expand the navigation
+            const navExpandButton = document.getElementById('navExpand')
+            // tell the browser to listen for a click event 
+            // and to run "handleClick" when it is clicked
+            navExpandButton.addEventListener('click', () => handleClick(nav))
+        </script>
+    </body>
+
+</html>

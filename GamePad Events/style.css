@@ -1,0 +1,42 @@
+:root {
+  --font-size: 16px;
+  --playAreaBg: green;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#field {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: var(--playAreaBg);
+  height: 632px;
+  aspect-ratio: 16/9;
+  padding: 1rem;
+}
+
+#playArea {
+  border: white 1px solid;
+  height: 100%;
+  position: relative;
+}
+
+#player {
+  --playerPos_top: 300px;
+  --playerPos_left: 300px;
+  position: absolute;
+  font-size: var(--font-size);
+  line-height: var(--font-size);
+  top: calc(var(--playerPos_top) - var(--font-size));
+  left: calc(var(--playerPos_left) - var(--font-size));
+}
